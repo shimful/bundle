@@ -1,0 +1,9 @@
+FROM node:18-alpine
+RUN apk add --no-cache \
+  git \
+  openssh \
+  ripgrep
+RUN corepack enable
+RUN mkdir -p /workspace && chown node:node /workspace
+USER node
+RUN mkdir -p /workspace/node_modules /workspace/dist
