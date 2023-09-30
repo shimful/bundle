@@ -1,12 +1,11 @@
 {
+  "name": "@shimful/eslint-plugin-react",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "lint": "eslint --max-warnings=0 .",
     "build": "node build.js"
   },
-  "license": "MIT",
   "devDependencies": {
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "7.33.2"
   }
 }

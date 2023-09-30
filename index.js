@@ -62,15 +62,16 @@ async function buildShimfulPackage(
     join(outdir + sep, "package.json"),
     JSON.stringify(
       {
-        name: output,
-        version: outPkg.version,
+        ...outPkg,
         main: "./index.js",
-        license: "MIT",
-        dependencies: Object.fromEntries(
-          Object.entries(inPkg.dependencies ?? {}).filter(([dep]) => {
-            return !has(shims, dep) && !inlinePackages.includes(dep);
-          }),
-        ),
+        dependencies: {
+          ...(outPkg.dependencies ?? {}),
+          ...Object.fromEntries(
+            Object.entries(inPkg.dependencies ?? {}).filter(([dep]) => {
+              return !has(shims, dep) && !inlinePackages.includes(dep);
+            }),
+          ),
+        },
       },
       null,
       2,
