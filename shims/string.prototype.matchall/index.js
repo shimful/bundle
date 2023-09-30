@@ -1,3 +1,1 @@
-module.exports = function (str, ...args) {
-  return String.prototype.matchAll.call(str, ...args);
-};
+module.exports = (str, ...args) => String.prototype.matchAll.call(str, ...args);

@@ -1,1 +1,1 @@
-module.exports = Object.fromEntries.bind(Object);
+module.exports = Object.fromEntries;

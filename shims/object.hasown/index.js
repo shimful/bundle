@@ -1,5 +1,1 @@
-const hasOwn = Object.prototype.hasOwnProperty;
-
-module.exports = function (obj, key) {
-  return hasOwn.call(obj, key);
-};
+module.exports = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);

@@ -1,4 +1,4 @@
-module.exports = function forEach(iterator, callbackFn) {
+module.exports = (iterator, callbackFn) => {
   let index = 0;
   for (const element of iterator) {
     callbackFn(element, index++);

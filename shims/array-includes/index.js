@@ -1,3 +1,1 @@
-module.exports = function (arr, ...args) {
-  return Array.prototype.includes.call(arr, ...args);
-};
+module.exports = (arr, ...args) => Array.prototype.includes.call(arr, ...args);

@@ -1,3 +1,1 @@
-const shim = require("./index.js");
-
-module.exports = () => shim;
+module.exports = () => Object.fromEntries;
